@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Zadanie6</string>
+    <string name="task_name_hint">Wprowadz nazwę zdania</string>
+    <string name="task_name_label">Nazwa</string>
+    <string name="task_details_label">Sczegóły</string>
+    <string name="task_done_label">Wykonane</string>
+
+</resources>
