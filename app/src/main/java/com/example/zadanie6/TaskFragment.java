@@ -22,10 +22,7 @@ import java.util.UUID;
 public class TaskFragment extends Fragment {
 
     private static String ARG_TASK_ID = "0";
-    //private EditText nameField;task_id
     private Task task;
-    //private Button dateButton;
-    //private CheckBox doneCheckBox;
 
     @RequiresApi(api = Build.VERSION_CODES.N)
     @Override

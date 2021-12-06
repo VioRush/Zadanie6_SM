@@ -7,4 +7,10 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="primary">#E1BEE7</color>
+    <color name="primary_light">#FFF1FF</color>
+    <color name="primary_dark">#AF8EB5</color>
+    <color name="primary_task">#455a64</color>
+    <color name="task_background_light">#BDBDBD</color>
 </resources>
