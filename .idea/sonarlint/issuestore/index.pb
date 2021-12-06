@@ -3,17 +3,3 @@ P
  app/src/main/AndroidManifest.xml,8\c\8c55c3ccc257e5907959013f99656e4c8ec3903e
 @
 app/build.gradle,f\4\f4a01d6a4fcb971362ec00a83903fd3902f52164
-`
-0app/src/main/java/com/example/zadanie6/Task.java,7\e\7e6217865d525081778ed99020c9e2fba4be8b82
-h
-8app/src/main/java/com/example/zadanie6/TaskFragment.java,0\0\0067afdd7a4f2bdf4ac802f8d1c6ff85e6f49611
-g
-7app/src/main/java/com/example/zadanie6/TaskStorage.java,a\b\abcd6783b7a33cf52adccb590e5064fb95816d48
-l
-<app/src/main/java/com/example/zadanie6/TaskListFragment.java,6\7\67742577128068f507f2272294fc2b54dc377af3
-l
-<app/src/main/java/com/example/zadanie6/TaskListActivity.java,6\6\6681c6f95e84fb3de0010d119574f098facfd5c2
-r
-Bapp/src/main/java/com/example/zadanie6/SingleFragmentActivity.java,7\7\77f39bec9a43fef0d0194d04a9a4ff2a77ce12d6
-h
-8app/src/main/java/com/example/zadanie6/MainActivity.java,e\f\ef16714873ebfe3e3e640811987f75bb29b32847

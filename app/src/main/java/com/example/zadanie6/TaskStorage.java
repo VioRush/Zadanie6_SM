@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 public class TaskStorage {
     private static final TaskStorage taskStorage = new TaskStorage();
@@ -34,6 +35,7 @@ public class TaskStorage {
         return tasks;
     }
 
+    /*
     public Task getTask(UUID id) {
         for (Task task : tasks) {
             if (task.getId().equals(id)) {
@@ -41,5 +43,12 @@ public class TaskStorage {
             }
         }
         return null;
+    }*/
+    @RequiresApi(api = Build.VERSION_CODES.N)
+    public Task getTask(UUID taskId){
+        return tasks.stream()
+                .filter(x->x.getId().equals(taskId))
+                .collect(Collectors.toList())
+                .get(0);
     }
 }

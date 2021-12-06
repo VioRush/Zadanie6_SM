@@ -1,5 +1,6 @@
 package com.example.zadanie6;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -13,18 +14,20 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
 
 import java.util.UUID;
 
 public class TaskFragment extends Fragment {
 
-    private static String ARG_TASK_ID = "task_id";
-    private EditText nameField;
+    private static String ARG_TASK_ID = "0";
+    //private EditText nameField;task_id
     private Task task;
-    private Button dateButton;
-    private CheckBox doneCheckBox;
+    //private Button dateButton;
+    //private CheckBox doneCheckBox;
 
+    @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,7 +43,7 @@ public class TaskFragment extends Fragment {
         super.onCreateView(inflater, container, savedInstanceState);
         View view = inflater.inflate(R.layout.fragment_task, container, false);
 
-        nameField = view.findViewById(R.id.task_name);
+        TextView nameField = view.findViewById(R.id.task_name);
         nameField.addTextChangedListener(new TextWatcher() {
            @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -59,11 +62,13 @@ public class TaskFragment extends Fragment {
 
         });
 
-        dateButton = container.findViewById(R.id.task_date);
+        nameField.setText(task.getName());
+
+        Button dateButton = container.findViewById(R.id.task_date);
         dateButton.setText(task.getDate().toString());
         dateButton.setEnabled(false);
 
-        doneCheckBox = container.findViewById(R.id.task_done);
+        CheckBox doneCheckBox = container.findViewById(R.id.task_done);
         doneCheckBox.setChecked(task.isDone());
         doneCheckBox.setOnCheckedChangeListener((buttonView, isChecked) -> {
             task.setDone(isChecked);

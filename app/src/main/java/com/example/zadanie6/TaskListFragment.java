@@ -27,8 +27,8 @@ public class TaskListFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_task_list, container, false);
         recyclerView = view.findViewById(R.id.task_recycler_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-
-        return recyclerView;
+        updateView();
+        return view;
     }
 
     private class TaskHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
