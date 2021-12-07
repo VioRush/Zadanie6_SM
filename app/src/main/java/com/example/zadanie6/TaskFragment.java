@@ -21,7 +21,7 @@ import java.util.UUID;
 
 public class TaskFragment extends Fragment {
 
-    private static String ARG_TASK_ID = "0";
+    private static String ARG_TASK_ID = "task_id";
     private Task task;
 
     @RequiresApi(api = Build.VERSION_CODES.N)
@@ -37,7 +37,7 @@ public class TaskFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        super.onCreateView(inflater, container, savedInstanceState);
+       // super.onCreateView(inflater, container, savedInstanceState);
         View view = inflater.inflate(R.layout.fragment_task, container, false);
 
         TextView nameField = view.findViewById(R.id.task_name);
@@ -74,7 +74,7 @@ public class TaskFragment extends Fragment {
         return view;
     }
 
-    public static TaskFragment newInstance(UUID taskId){
+    public static Fragment newInstance(UUID taskId){
         Bundle bundle = new Bundle();
         bundle.putSerializable(ARG_TASK_ID, taskId);
         TaskFragment taskFragment = new TaskFragment();
